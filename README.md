@@ -20,7 +20,9 @@ In form1.cs on line 29, change the value for gap to change the vertical space be
 
 ## Step 6 (If there is time) - Jump with "Space"
 In form1.cs, change line 140 from:
+
 if (e.KeyCode == Keys.Up) { vel[1] = -10; fly.Play(); } // JUMP!
 
 to:
+
 if ((e.KeyCode == Keys.Up) || (e.KeyCode == Keys.Space)) { vel[1] = -10; fly.Play(); } // JUMP!
