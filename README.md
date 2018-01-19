@@ -1,4 +1,4 @@
-# Flappy Bird Clone for 8th and 10th graders
+# Flappy Bird Clone Imstructions
 ## Step 0 - Preparation
 Go into the media lab with your partner and have Mr. Dockett take a side view photo of their head facing to the right. Once everyone's photo has been taken, Mr. Dockett will upload all of the photos to the tacher share for you to get. 
 
