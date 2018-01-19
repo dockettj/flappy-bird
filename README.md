@@ -1,21 +1,26 @@
-# VS-Flappy-Bird
-### A Flappy Bird clone made in Visual C#, under the .NET Framework 4.5.2; Console Application 
+# Flappy Bird Clone for 8th and 10th graders
+## Step 0 - Preparation
+Go into the media lab with your partner and have Mr. Dockett take a side view photo of their head facing to the right. Once everyone's photo has been taken, Mr. Dockett will upload all of the photos to the tacher share for you to get. 
 
-This was made during a College Lesson in around 30 mins. 
+## Step 1 - Download & Open the Starter Code
+Download this repo as a zip folder. Once complete, extract the files to your desktop. Open the parent folder and double click "c game.sln."
+This will open Visual Studio.
 
-All assets used were taken directly from the Internet:
+## Step 2 - Photoshop
+Use Adobe Photoshop to open the photo and the magnetic lasso (l) tool to trace around their head. Right click on the image and click "Select inverse." Double click the layer in to turn it into a regular layer instead of a background layer (removing the lock). Selct the eraser tool (e) and erase the space around the student's head. Crop the photo to a square with the player's head centered. Save or export the photo as a png file with transparency. It is important to make sure that your image has transparency. An image without transparency will just have a white background.
 
-  [Sounds](https://www.sounds-resource.com/mobile/flappybird/sound/5309/)
-  
-  [Pipe](http://pixelart.studio/Gallery/Image/0f1aaa16-7b6f-4096-ac72-76c436ae0f6c?type=png)
-  
-  [Bird](https://i-cdn.phonearena.com/images/article/52185-image/Catch-the-pigeon-Here-are-the-best-and-worst-Flappy-Bird-clones.jpg)
-  
-  [Floor](http://flappycreator.com/default/ground.png)
+## Step 3 - Change the Bird to a Head.
+In the form designer, select the bird, then right click on it and select "choose image...." Select the "Local Resource" radio button then click the upper "Import..." button. Find the player's head image and click "Open." The bird image has now been replaced by the player's head.
 
-# Play
-Run through Visual Studio by launching "c game.sln".
+## Step 4 - Change the Gravity setting.
+Open the code editor for form1.cs and go to line 111. Change the number assigned to acc[1] to change gravity. Almost no gravity is "0.01" Tons of gravity is "10." Default gravity is "0.45."
 
-Run the Executable through the Bin/Debug Folder ("c game.exe").
- 
+## Step 5 - Change the Vertical Space Between Pipes.
+In form1.cs on line 29, change the value for gap to change the vertical space between pipes. The space is measured in pixels. A bigger number means more space and in turn makes the game easier. Setting this value to "0" would make the game impossible.
 
+## Step 6 (If there is time) - Jump with "Space"
+In form1.cs, change line 140 from:
+if (e.KeyCode == Keys.Up) { vel[1] = -10; fly.Play(); } // JUMP!
+
+to:
+if ((e.KeyCode == Keys.Up) || (e.KeyCode == Keys.Space)) { vel[1] = -10; fly.Play(); } // JUMP!
