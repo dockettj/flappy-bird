@@ -143,7 +143,7 @@ namespace c_game
         private void Spawn_Tick(object sender, EventArgs e)
         {
             PictureBox pipe = new PictureBox(); // top
-            Image flipImage = Image.FromFile("trump-tower.png");
+            Image flipImage = Image.FromFile("pipe.png");
             flipImage.RotateFlip(RotateFlipType.Rotate180FlipX);
             pipe.BackgroundImage = flipImage;
             pipe.BackgroundImageLayout = ImageLayout.Stretch;
@@ -152,7 +152,7 @@ namespace c_game
             topPipes[numPipes] = pipe;
 
             PictureBox pipe1 = new PictureBox(); // bottom
-            pipe1.BackgroundImage = Image.FromFile("trump-tower.png");
+            pipe1.BackgroundImage = Image.FromFile("pipe.png");
             pipe1.BackgroundImageLayout = ImageLayout.Stretch;
             pipe1.Width = pipeWidth;         
             Controls.Add(pipe1);
@@ -181,9 +181,5 @@ namespace c_game
             if (ptcBottom.Location.X <= 0 - this.Width) { ptcBottom.Left = 0; } // reset when of screen
         }
 
-        private void labelTitle_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

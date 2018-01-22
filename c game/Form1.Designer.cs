@@ -76,12 +76,11 @@
             this.labelTitle.AutoSize = true;
             this.labelTitle.BackColor = System.Drawing.Color.Transparent;
             this.labelTitle.Font = new System.Drawing.Font("Microsoft YaHei UI", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTitle.Location = new System.Drawing.Point(120, 124);
+            this.labelTitle.Location = new System.Drawing.Point(148, 151);
             this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(346, 62);
+            this.labelTitle.Size = new System.Drawing.Size(286, 62);
             this.labelTitle.TabIndex = 2;
-            this.labelTitle.Text = "Flappy Trump";
-            this.labelTitle.Click += new System.EventHandler(this.labelTitle_Click);
+            this.labelTitle.Text = "Flappy Bird";
             // 
             // buttonPlay
             // 
@@ -157,7 +156,7 @@
             // Player
             // 
             this.Player.BackColor = System.Drawing.Color.Transparent;
-            this.Player.BackgroundImage = global::c_game.Properties.Resources.trump_head;
+            this.Player.BackgroundImage = global::c_game.Properties.Resources.piq_166547_400x4001;
             this.Player.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Player.Location = new System.Drawing.Point(273, 263);
             this.Player.Name = "Player";
