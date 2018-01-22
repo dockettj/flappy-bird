@@ -137,7 +137,7 @@ namespace c_game
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
-            if ((e.KeyCode == Keys.Up) || (e.KeyCode == Keys.Space)) { vel[1] = -10; fly.Play(); } // JUMP!
+            if (e.KeyCode == Keys.Up) { vel[1] = -10; fly.Play(); } // JUMP!
         }
 
         private void Spawn_Tick(object sender, EventArgs e)
