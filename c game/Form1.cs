@@ -26,7 +26,7 @@ namespace c_game
         //pipe global variables
         int highScore = 0;
         int score = 0;       
-        int gap = 190; //190
+        int gap = 180; // Change the space between pipes. Default = 180
         int PipeMinHeight = 150;
         int gapLocation;
         int numPipes = 0;
@@ -108,7 +108,7 @@ namespace c_game
 
         private void Clock_Tick(object sender, EventArgs e)
         {
-            acc[1] = 0.45; // 0.45
+            acc[1] = 0.45; // Change this to change the gravity. Lower number = lower gravity.
             vel[1] += acc[1];
             pos[1] += (vel[1] + 0.55 * acc[1]);
 
@@ -137,13 +137,13 @@ namespace c_game
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Up) { vel[1] = -10; fly.Play(); } // JUMP!
+            if ((e.KeyCode == Keys.Up) || (e.KeyCode == Keys.Space)) { vel[1] = -10; fly.Play(); } // JUMP!
         }
 
         private void Spawn_Tick(object sender, EventArgs e)
         {
             PictureBox pipe = new PictureBox(); // top
-            Image flipImage = Image.FromFile("pipe.png");
+            Image flipImage = Image.FromFile("trump-tower.png");
             flipImage.RotateFlip(RotateFlipType.Rotate180FlipX);
             pipe.BackgroundImage = flipImage;
             pipe.BackgroundImageLayout = ImageLayout.Stretch;
@@ -152,7 +152,7 @@ namespace c_game
             topPipes[numPipes] = pipe;
 
             PictureBox pipe1 = new PictureBox(); // bottom
-            pipe1.BackgroundImage = Image.FromFile("pipe.png");
+            pipe1.BackgroundImage = Image.FromFile("trump-tower.png");
             pipe1.BackgroundImageLayout = ImageLayout.Stretch;
             pipe1.Width = pipeWidth;         
             Controls.Add(pipe1);
@@ -179,6 +179,11 @@ namespace c_game
         {
             ptcBottom.Location = new Point(Convert.ToInt32(ptcBottom.Location.X - 1.5), ptcBottom.Location.Y); // move the ground at the bottom of the screen
             if (ptcBottom.Location.X <= 0 - this.Width) { ptcBottom.Left = 0; } // reset when of screen
+        }
+
+        private void labelTitle_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

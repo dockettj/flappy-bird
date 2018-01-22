@@ -136,6 +136,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="piq_166547_400x400_4yn_icon.ico" />
+    <None Include="Resources\trump-tower1.png" />
+    <None Include="Resources\trump-head1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

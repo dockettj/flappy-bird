@@ -38,10 +38,10 @@
             this.LabelHighScore = new System.Windows.Forms.Label();
             this.Music = new AxWMPLib.AxWindowsMediaPlayer();
             this.MusicFall = new AxWMPLib.AxWindowsMediaPlayer();
-            this.ptcBottom = new System.Windows.Forms.PictureBox();
-            this.Player = new System.Windows.Forms.PictureBox();
             this.labelControls = new System.Windows.Forms.Label();
             this.Ground = new System.Windows.Forms.Timer(this.components);
+            this.ptcBottom = new System.Windows.Forms.PictureBox();
+            this.Player = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.Music)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MusicFall)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptcBottom)).BeginInit();
@@ -76,11 +76,12 @@
             this.labelTitle.AutoSize = true;
             this.labelTitle.BackColor = System.Drawing.Color.Transparent;
             this.labelTitle.Font = new System.Drawing.Font("Microsoft YaHei UI", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTitle.Location = new System.Drawing.Point(153, 127);
+            this.labelTitle.Location = new System.Drawing.Point(120, 124);
             this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(286, 62);
+            this.labelTitle.Size = new System.Drawing.Size(346, 62);
             this.labelTitle.TabIndex = 2;
-            this.labelTitle.Text = "Flappy Bird";
+            this.labelTitle.Text = "Flappy Trump";
+            this.labelTitle.Click += new System.EventHandler(this.labelTitle_Click);
             // 
             // buttonPlay
             // 
@@ -126,26 +127,6 @@
             this.MusicFall.TabIndex = 6;
             this.MusicFall.Visible = false;
             // 
-            // ptcBottom
-            // 
-            this.ptcBottom.BackgroundImage = global::c_game.Properties.Resources.floorShort;
-            this.ptcBottom.Location = new System.Drawing.Point(-6, 658);
-            this.ptcBottom.Name = "ptcBottom";
-            this.ptcBottom.Size = new System.Drawing.Size(1508, 105);
-            this.ptcBottom.TabIndex = 7;
-            this.ptcBottom.TabStop = false;
-            // 
-            // Player
-            // 
-            this.Player.BackColor = System.Drawing.Color.Transparent;
-            this.Player.BackgroundImage = global::c_game.Properties.Resources.piq_166547_400x4001;
-            this.Player.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Player.Location = new System.Drawing.Point(273, 263);
-            this.Player.Name = "Player";
-            this.Player.Size = new System.Drawing.Size(50, 50);
-            this.Player.TabIndex = 0;
-            this.Player.TabStop = false;
-            // 
             // labelControls
             // 
             this.labelControls.AutoSize = true;
@@ -163,6 +144,26 @@
             this.Ground.Enabled = true;
             this.Ground.Interval = 1;
             this.Ground.Tick += new System.EventHandler(this.Ground_Tick);
+            // 
+            // ptcBottom
+            // 
+            this.ptcBottom.BackgroundImage = global::c_game.Properties.Resources.floorShort;
+            this.ptcBottom.Location = new System.Drawing.Point(-6, 658);
+            this.ptcBottom.Name = "ptcBottom";
+            this.ptcBottom.Size = new System.Drawing.Size(1508, 105);
+            this.ptcBottom.TabIndex = 7;
+            this.ptcBottom.TabStop = false;
+            // 
+            // Player
+            // 
+            this.Player.BackColor = System.Drawing.Color.Transparent;
+            this.Player.BackgroundImage = global::c_game.Properties.Resources.trump_head;
+            this.Player.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Player.Location = new System.Drawing.Point(273, 263);
+            this.Player.Name = "Player";
+            this.Player.Size = new System.Drawing.Size(50, 50);
+            this.Player.TabIndex = 0;
+            this.Player.TabStop = false;
             // 
             // Form1
             // 
